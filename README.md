@@ -20,7 +20,7 @@ To just rebuild after making changes, run the following command from the top lev
 The QNX build requires that the `QNX_BASE` environment variable is set to the location where
 the QNX 7.1 Software Development Platform has been installed. For example:
 
-`export QNX_BASE=$HOME/qnx710'
+`export QNX_BASE=$HOME/qnx710`
 
 To build for QNX, run the following command from the top level directory:
 
@@ -88,4 +88,4 @@ $ arp -an | grep -iE "52:54:0"
 ? (10.0.2.2) at 52:54:0:12:34:56 on bridge100 ifscope [bridge]
 ```
 
-The IP address is located in parentheses in the output
+The IP address is located in parentheses in the output.
