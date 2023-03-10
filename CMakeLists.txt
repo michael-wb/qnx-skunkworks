@@ -11,13 +11,14 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 set(REALM_BUILD_LIB_ONLY ON)
 add_subdirectory(realm-core)
 
-set(REALM_INCLUDE_CERTS 0)
+set(REALM_INCLUDE_CERTS 1)
 set(REALM_NO_CONFIG)
 set(REALM_ENABLE_SYNC)
 set(REALM_NO_TESTS)
 set(REALM_BUILD_LIB_ONLY)
 set(REALM_INSTALL_LIBEXECDIR)
 set(REALM_ENABLE_ENCRYPTION 1)
+set(REALM_DISABLE_METADATA_ENCRYPTION=1)
 
 add_compile_definitions(REALM_NO_CONFIG)
 add_compile_definitions(REALM_ENABLE_SYNC)
@@ -61,13 +62,10 @@ if(NOT APPLE AND NOT WINDOWS_STORE AND NOT ANDROID)
     
     target_link_libraries(qnxdemo PUBLIC ${libuv_target})
 
-    target_compile_definitions(qnxdemo PUBLIC REALM_DISABLE_METADATA_ENCRYPTION=1 REALM_ENABLE_SYNC=1)
     target_compile_definitions(ObjectStore PUBLIC REALM_HAVE_UV=1)
     target_link_libraries(ObjectStore PUBLIC ${libuv_target})
-
-else()
-    target_compile_definitions(qnxdemo PUBLIC REALM_ENABLE_SYNC=1)
 endif()
 
+target_compile_definitions(qnxdemo PUBLIC REALM_ENABLE_SYNC=1)
 target_link_libraries(qnxdemo PUBLIC Realm::ObjectStore)
 set(CMAKE_OSX_SYSROOT ${CMAKE_OSX_SYSROOT_PATH})

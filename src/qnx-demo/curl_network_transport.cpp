@@ -147,6 +147,7 @@ static app::Response do_http_request(const app::Request& request)
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response);
     curl_easy_setopt(curl, CURLOPT_HEADERFUNCTION, curl_header_cb);
     curl_easy_setopt(curl, CURLOPT_HEADERDATA, &response_headers);
+    curl_easy_setopt(curl, CURLOPT_SSL_VERIFYPEER, 0);
 
     auto response_code = curl_easy_perform(curl);
     if (response_code != CURLE_OK) {
