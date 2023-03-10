@@ -30,3 +30,11 @@
 *.exe
 *.out
 *.app
+
+# QNX VM Outputs
+qnx-vm/output/*
+
+# Outputs
+debug/
+release/
+build-qnx*/

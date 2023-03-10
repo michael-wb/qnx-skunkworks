@@ -1,0 +1,7 @@
+# local/snippets/ifs_files.custom
+# Placeholder for local list of files to add to ifs
+usr/lib/libbz2.so.1
+usr/lib/liblzma.so.5
+usr/lib/libxml2.so.2
+usr/lib/libcurl.so.11
+usr/lib/libcares.so.6
