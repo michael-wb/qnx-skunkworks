@@ -88,4 +88,12 @@ $ arp -an | grep -iE "52:54:0"
 ? (10.0.2.2) at 52:54:0:12:34:56 on bridge100 ifscope [bridge]
 ```
 
-The IP address is located in parentheses in the output.
+The IP address is located in parentheses in the output. To SSH to the QNX VM, run the
+following command:
+
+`ssh -i qnx-vm/keys/qnx-target root@10.0.2.2`
+
+NOTE: SSH may complain about the permissions of the identity file. If so, then run the
+following command to make the private key file read only:
+
+`chmod 400 qnx-vm/keys/qnx-target`
