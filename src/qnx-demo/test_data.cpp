@@ -18,13 +18,7 @@
 
 #include <qnx-demo/test_data.hpp>
 
-const std::vector<Person> Person::data = {
-    {"Eliza", "Thornberry", 14},
-    {"Chuckie", "Finster", 3},
-    {"Tommy", "Pickles", 2},
-    {"Angelica", "Pickles", 5},
-    {"Patrick", "Star", 16},
-    {"Mister", "Krabs", 42},
+const std::vector<Person> Person::data1 = {
     {"Dil", "Pickles", 1},
     {"Carl", "Wheezer", 8},
     {"Jimmy", "Neutron", 9},
@@ -33,3 +27,20 @@ const std::vector<Person> Person::data = {
     {"Ren", "Höek", 8},
 };
 
+const std::vector<Person> Person::data2 = {
+    {"Eliza", "Thornberry", 14},
+    {"Chuckie", "Finster", 3},
+    {"Tommy", "Pickles", 2},
+    {"Angelica", "Pickles", 5},
+    {"Patrick", "Star", 16},
+    {"Mister", "Krabs", 42},
+};
+
+const std::vector<Person> Person::data3 = {
+    {"SpongeBob", "SquarePants", 8},
+    {"Nigel", "Thornberry", 55},
+    {"Bubble", "Bass", 15},
+    {"Lola", "Loud", 7},
+    {"Boog", "Shilzetti", 13},
+    {"Danny", "Phantom", 15},
+};

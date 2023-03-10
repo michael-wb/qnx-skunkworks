@@ -38,3 +38,6 @@ qnx-vm/output/*
 debug/
 release/
 build-qnx*/
+
+# Miscellaneous
+.vscode

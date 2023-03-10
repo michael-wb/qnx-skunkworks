@@ -22,9 +22,11 @@
 struct Person {
     std::string firstName;
     std::string lastName;
-    int age;
+    int64_t age;
 
-    static const std::vector<Person> data;
+    static const std::vector<Person> data1;
+    static const std::vector<Person> data2;
+    static const std::vector<Person> data3;
 };
 
 
