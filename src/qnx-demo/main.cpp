@@ -64,7 +64,7 @@ int main(int argc, char** argv)
     CppContext ctx(realm);
 
     auto people = new Results(realm, ObjectStore::table_for_object_type(realm->read_group(), "Person"));
-    logger->info("Number of people: %1", people->size());
+    logger->info("Number of people in realm: %1", people->size());
 
     auto token = people->add_notification_callback([&logger](CollectionChangeSet change) {
         logger->info("Info was empty: %1", change.empty() ? "YES" : "NO");
@@ -76,10 +76,10 @@ int main(int argc, char** argv)
     realm->begin_transaction();
     for (const auto& person : Person::data) {
         add_person(realm, ctx, person);
+        logger->info("Added person: %1 %2 (age %3)", person.firstName, person.lastName, person.age);
     }
     realm->commit_transaction();
-    logger->info("Added one person");
-    logger->info("Number of people: %1", people->size());
+    logger->info("Number of people in realm: %1", people->size());
 
     return 0;
 }

@@ -20,7 +20,7 @@
 
 const std::vector<Person> Person::data = {
     {"Eliza", "Thornberry", 14},
-    {"Cuckie", "Finster", 3},
+    {"Chuckie", "Finster", 3},
     {"Tommy", "Pickles", 2},
     {"Angelica", "Pickles", 5},
     {"Patrick", "Star", 16},
